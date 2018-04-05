@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
   },
   "repository": {
     "type": "git",
@@ -18,5 +25,14 @@
   "homepage": "https://github.com/kyusu/Penemue#readme",
   "dependencies": {
     "crocks": "^0.9.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-cleanjs": "^4.0.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4"
   }
 }
