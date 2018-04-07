@@ -1,3 +1,8 @@
 {
-    "extends": "cleanjs"
+    "extends": "cleanjs",
+    "rules": {
+        "import/no-commonjs": [
+            0
+        ]
+    }
 }
