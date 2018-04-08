@@ -8,6 +8,9 @@
     "lint": "eslint .",
     "precommit": "lint-staged"
   },
+  "bin": {
+    "penemue": "./index.js"
+  },
   "lint-staged": {
     "*.js": [
       "eslint"
