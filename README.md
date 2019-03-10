@@ -5,11 +5,11 @@
 This iframe can then be embedded again into an HTML5 presentation frameworks like [reveal.js](https://revealjs.com).
 
 ## Motivation
-While HTML5 presentation frameworks usually have decent to excellent syntax highlighting, I've yet to see one which lets me actually execute the code to show the result. Sometimes having a little _play_ button or something similar would be helpful if during a presentation ones wants to show the result of running the code.
+While HTML5 presentation frameworks usually have decent to excellent syntax highlighting, I've yet to see one which lets me actually execute the code to show the result. Sometimes having a little _play_ button or something similar would be helpful if during a presentation one wants to show the result of running the code.
 
 [RunKit](https://runkit.com/) lets me execute my [Node.js](https://nodejs.org/) scripts in the browser which is exactly what I was looking for.
 
-Since I usually save the code for a presentation in separate files, I was looking for a away of easily converting those files into [RunKit](https://runkit.com/) URLs.
+Since I usually save the code for a presentation in separate files, I was looking for a way to easily convert those files into embeddable [RunKit](https://runkit.com/) URLs.
 
 ## Usage
 
