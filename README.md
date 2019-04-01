@@ -1,5 +1,7 @@
 # Penemue
 
+![State of dependencies](https://david-dm.org/kyusu/Penemue.svg)
+
 ## Purpose
 [Penemue](https://en.wikipedia.org/wiki/Penemue) is just a small command-line application which is lets you convert the content of a JavaScript file to a [RunKit](https://runkit.com/) URL embedded in an iframe.
 This iframe can then be embedded again into an HTML5 presentation frameworks like [reveal.js](https://revealjs.com).
