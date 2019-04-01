@@ -1,6 +1,7 @@
 # Penemue
 
 ![State of dependencies](https://david-dm.org/kyusu/Penemue.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c2b6971343ff284370af/maintainability)](https://codeclimate.com/github/kyusu/Penemue/maintainability)
 
 ## Purpose
 [Penemue](https://en.wikipedia.org/wiki/Penemue) is just a small command-line application which is lets you convert the content of a JavaScript file to a [RunKit](https://runkit.com/) URL embedded in an iframe.
