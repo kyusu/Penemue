@@ -1,10 +1,8 @@
-const fs = require('fs');
 const UrlAssembler = require('url-assembler');
-const getStdin = require('get-stdin');
-const {fromPromise, fromNode, Rejected, Resolved, all} = require('crocks/Async');
+const {Rejected, Resolved, all} = require('crocks/Async');
 const {split, compose, reject, isEmpty, map, join} = require('ramda');
-
-const getFileContentAsBuffer = fromNode(fs.readFile);
+const getStdinAsync = require('./getStdinAsync.js');
+const getFileContentAsBuffer = require('./getFileContentAsBuffer.js');
 
 const bufferToBase64 = buffer => buffer.toString('base64');
 
@@ -24,8 +22,6 @@ const convertFileToRunkitIframe = fileName => getFileContentAsBuffer(fileName)
     .map(bufferToBase64)
     .map(getRunkitURL(fileName))
     .map(getIframe(fileName));
-
-const getStdinAsync = fromPromise(getStdin);
 
 const checkInput = errorMessage => input => input && input.length ? Resolved(input) : Rejected(errorMessage);
 
