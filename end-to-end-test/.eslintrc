@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "fp/no-unused-expression": "off",
+        "fp/no-nil": "off",
+        "better/explicit-return": "off"
+    }
+}
