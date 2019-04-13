@@ -26,16 +26,16 @@ const checkInput = errorMessage => input => input && input.length ? Resolved(inp
 
 const getLines = compose(reject(isEmpty), split('\n'));
 
-const getIframes = getFileContentAsBuffer => compose(
-    all,
-    map(convertFileToRunkitIframe(getFileContentAsBuffer))
-);
+const getIframes = getFileContentAsBuffer => compose(all, map(convertFileToRunkitIframe(getFileContentAsBuffer)));
+
+const injectFsReadFileAndGetIframes = fileName =>
+    AsyncReader(({getFileContentAsBuffer}) => getIframes(getFileContentAsBuffer)(fileName));
 
 const getStdIn = () => AsyncReader(({getStdInAsync}) => getStdInAsync());
 
 module.exports = env => compose(
     map(join('\n')),
-    chain(fileName => AsyncReader(({getFileContentAsBuffer}) => getIframes(getFileContentAsBuffer)(fileName))),
+    chain(injectFsReadFileAndGetIframes),
     map(getLines),
     chain(liftFn(checkInput('No input was given!'))),
     chain(getStdIn),
