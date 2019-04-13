@@ -10,5 +10,18 @@
                 "commonjs": true
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.test.js"
+            ],
+            "rules": {
+                "fp/no-unused-expression": "off",
+                "fp/no-nil": "off",
+                "better/no-new": "off",
+                "better/explicit-return": "off"
+            }
+        }
+    ]
 }
