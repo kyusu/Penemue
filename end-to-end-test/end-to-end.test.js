@@ -1,10 +1,12 @@
 const test = require('tape');
 const path = require('path');
 const {exec} = require('child_process');
-const {reject, split, compose, isEmpty} = require('ramda');
+const {reject, split, compose, isEmpty, startsWith, trim, map} = require('ramda');
 
 const getMessagesFromError = compose(
+    reject(startsWith('at')),
     reject(isEmpty),
+    map(trim),
     split('\n')
 );
 
@@ -16,12 +18,12 @@ const expectedValueForFoojs = '<iframe data-file-name="end-to-end-test/foo.js" s
 const expectedNonExistingFileMessages = [
     'Command failed: ls baz.js | node index.js',
     'ls: baz.js: No such file or directory',
-    'No input was given!'
+    'Error: No input was given!'
 ];
 
 const expectedEmptyFileMessages = [
     'Command failed: ls end-to-end-test/empty.file.js | node index.js',
-    '"end-to-end-test/empty.file.js" is empty!'
+    'Error: "end-to-end-test/empty.file.js" is empty!'
 ];
 
 test('it outputs an iframe code snippet given a non empty file', t => {

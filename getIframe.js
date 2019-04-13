@@ -1,6 +1,6 @@
 const UrlAssembler = require('url-assembler');
 const {Rejected, Resolved, all} = require('crocks/Async');
-const {split, compose, reject, isEmpty, map, join, chain} = require('ramda');
+const {split, compose, reject, isEmpty, map, join, chain, construct} = require('ramda');
 const {ask, liftFn, AsyncReader} = require('./AsyncReader.js');
 
 const bufferToBase64 = buffer => buffer.toString('base64');
@@ -22,7 +22,9 @@ const convertFileToRunkitIframe = getFileContentAsBuffer => fileName => getFileC
     .map(getRunkitURL(fileName))
     .map(getIframe(fileName));
 
-const checkInput = errorMessage => input => input && input.length ? Resolved(input) : Rejected(errorMessage);
+const getRejectedError = compose(Rejected, construct(Error));
+
+const checkInput = errorMessage => input => input && input.length ? Resolved(input) : getRejectedError(errorMessage);
 
 const getLines = compose(reject(isEmpty), split('\n'));
 
