@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc tape getIframes.test.js && nyc tape end-to-end-test/end-to-end.test.js",
+    "test": "nyc tape {,**/}*.test.js",
     "lint": "eslint .",
     "precommit": "lint-staged"
   },
@@ -33,6 +33,7 @@
     "url-assembler": "^2.0.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
     "eslint-config-cleanjs": "^4.0.0",
     "eslint-plugin-better": "^0.1.5",
