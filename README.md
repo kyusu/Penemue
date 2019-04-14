@@ -1,5 +1,6 @@
 # Penemue
 
+[![Build Status](https://travis-ci.org/kyusu/Penemue.svg?branch=master)](https://travis-ci.org/kyusu/Penemue)
 [![dependencies Status](https://david-dm.org/kyusu/Penemue/status.svg)](https://david-dm.org/kyusu/Penemue)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c2b6971343ff284370af/maintainability)](https://codeclimate.com/github/kyusu/Penemue/maintainability)
 [![Known Vulnerabilities](https://snyk.io/test/github/kyusu/Penemue/badge.svg)](https://snyk.io/test/github/kyusu/Penemue)
