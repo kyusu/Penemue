@@ -1,7 +1,7 @@
 const test = require('tape');
 const path = require('path');
 const {exec} = require('child_process');
-const {reject, split, compose, isEmpty, startsWith, trim, map} = require('ramda');
+const {reject, split, compose, isEmpty, startsWith, trim, map, includes} = require('ramda');
 
 const getMessagesFromError = compose(
     reject(startsWith('at')),
@@ -15,11 +15,7 @@ const pathOfTestFile = testFile => path.relative(process.cwd(), path.join(__dirn
 
 const expectedValueForFoojs = '<iframe data-file-name="end-to-end-test/foo.js" src="https://runkit.com/e?name=end-to-end-test%2Ffoo.js&gutterStyle=outside&base64source=Y29uc3QgZm9vID0gYmFyID0%2BIGJhci5zcGxpdCgnJyk7Cg%3D%3D"></iframe>';
 
-const expectedNonExistingFileMessages = [
-    'Command failed: ls baz.js | node index.js',
-    'ls: baz.js: No such file or directory',
-    'Error: No input was given!'
-];
+const expectedNonExistingFileMessages = 'Error: No input was given!';
 
 const expectedEmptyFileMessages = [
     'Command failed: ls end-to-end-test/empty.file.js | node index.js',
@@ -39,7 +35,7 @@ test('it outputs an error given no input', t => {
     exec(`ls baz.js | node ${pathOfIndex}`, ({message}, result) => {
         const messages = getMessagesFromError(message);
         t.equal(result, '', 'result should be empty');
-        t.deepEqual(messages, expectedNonExistingFileMessages, 'the error messages should state the reason');
+        t.true(includes(expectedNonExistingFileMessages, messages), 'the error messages should state the reason');
         t.end();
     })
 });
