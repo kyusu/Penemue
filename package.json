@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc tape {,**/}*.test.js",
+    "test": "nyc tape end-to-end-test/*.test.js ./*.test.js",
     "lint": "eslint .",
     "precommit": "lint-staged"
   },
