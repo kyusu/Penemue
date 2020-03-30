@@ -1,6 +1,6 @@
 # Penemue
 
-[![Build Status](https://travis-ci.org/kyusu/Penemue.svg?branch=master)](https://travis-ci.org/kyusu/Penemue)
+[![Build Status](https://travis-ci.com/kyusu/Penemue.svg?branch=master)](https://travis-ci.com/kyusu/Penemue)
 [![Coverage Status](https://coveralls.io/repos/github/kyusu/Penemue/badge.svg?branch=master)](https://coveralls.io/github/kyusu/Penemue?branch=master)
 [![dependencies Status](https://david-dm.org/kyusu/Penemue/status.svg)](https://david-dm.org/kyusu/Penemue)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c2b6971343ff284370af/maintainability)](https://codeclimate.com/github/kyusu/Penemue/maintainability)
