@@ -39,7 +39,7 @@
     "eslint-plugin-better": "0.1.5",
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-import": "2.22.0",
-    "husky": "4.2.3",
+    "husky": "4.2.5",
     "lint-staged": "10.0.8",
     "nyc": "15.0.0",
     "tape": "4.13.2"
