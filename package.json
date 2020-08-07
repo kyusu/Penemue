@@ -28,7 +28,7 @@
   "homepage": "https://github.com/kyusu/Penemue#readme",
   "dependencies": {
     "crocks": "^0.12.4",
-    "get-stdin": "^7.0.0",
+    "get-stdin": "^8.0.0",
     "ramda": "^0.27.0",
     "url-assembler": "^2.1.1"
   },
