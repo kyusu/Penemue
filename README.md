@@ -6,6 +6,10 @@
 [![devDependencies Status](https://david-dm.org/kyusu/Penemue/dev-status.svg)](https://david-dm.org/kyusu/Penemue?type=dev)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c2b6971343ff284370af/maintainability)](https://codeclimate.com/github/kyusu/Penemue/maintainability)
 [![Known Vulnerabilities](https://snyk.io/test/github/kyusu/Penemue/badge.svg)](https://snyk.io/test/github/kyusu/Penemue)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kyusu/Penemue/graphs/commit-activity)
+[![GitHub license](https://img.shields.io/github/license/kyusu/Penemue.svg)](https://github.com/kyusu/Penemue/blob/master/LICENSE)
+
+
 
 ## Purpose
 [Penemue](https://en.wikipedia.org/wiki/Penemue) is just a small command-line application which is lets you convert the content of a JavaScript file to a [RunKit](https://runkit.com/) URL embedded in an iframe.
