@@ -8,6 +8,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/kyusu/Penemue/badge.svg)](https://snyk.io/test/github/kyusu/Penemue)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kyusu/Penemue/graphs/commit-activity)
 [![GitHub license](https://img.shields.io/github/license/kyusu/Penemue.svg)](https://github.com/kyusu/Penemue/blob/master/LICENSE)
+[![DeepScan grade](https://deepscan.io/api/teams/10488/projects/13333/branches/220794/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=10488&pid=13333&bid=220794)
 
 
 
