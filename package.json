@@ -4,6 +4,9 @@
   "type": "module",
   "description": "",
   "exports": "./index.js",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "test": "c8 tap end-to-end-test/*.test.js && c8 tap ./getIframes.test.js",
     "lint": "eslint .",
