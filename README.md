@@ -1,6 +1,6 @@
 # Penemue
 
-[![Build Status](https://travis-ci.com/kyusu/Penemue.svg?branch=master)](https://travis-ci.com/kyusu/Penemue)
+[![Node.js CI](https://github.com/kyusu/Penemue/workflows/Node.js%20CI/badge.svg)](https://github.com/kyusu/Penemue/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/kyusu/Penemue/badge.svg?branch=master)](https://coveralls.io/github/kyusu/Penemue?branch=master)
 [![dependencies Status](https://david-dm.org/kyusu/Penemue/status.svg)](https://david-dm.org/kyusu/Penemue)
 [![devDependencies Status](https://david-dm.org/kyusu/Penemue/dev-status.svg)](https://david-dm.org/kyusu/Penemue?type=dev)
