@@ -4,8 +4,13 @@
   "type": "module",
   "description": "",
   "exports": "./index.js",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
-    "test": "c8 tap end-to-end-test/*.test.js && c8 tap ./getIframes.test.js",
+    "test:unit": "c8 node ./getIframes.test.js",
+    "test:e2e": "c8  node end-to-end-test/*.test.js",
+    "report:coverage": "c8 report --reporter=lcov",
     "lint": "eslint .",
     "precommit": "lint-staged"
   },
