@@ -1,6 +1,6 @@
-const fs = require('fs');
-const {fromNode} = require('crocks/Async');
+import fs from 'fs';
+import Async from "crocks/Async/index.js"
 
-const getFileContentAsBuffer = fromNode(fs.readFile);
+const getFileContentAsBuffer = Async.fromNode(fs.readFile);
 
-module.exports = getFileContentAsBuffer;
+export default getFileContentAsBuffer;

@@ -1,6 +1,6 @@
-const getStdin = require('get-stdin');
-const {fromPromise} = require('crocks/Async');
+import getStdin from "get-stdin";
+import Async from "crocks/Async/index.js"
 
-const getStdinAsync = fromPromise(getStdin);
+const getStdinAsync = Async.fromPromise(getStdin);
 
-module.exports = getStdinAsync;
+export default getStdinAsync;

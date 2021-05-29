@@ -1,8 +1,5 @@
-const ReaderT = require('crocks/Reader/ReaderT');
-const Async = require('crocks/Async');
+import ReaderT from 'crocks/Reader/ReaderT.js';
+import Async from 'crocks/Async/index.js';
 
-const AsyncReader = ReaderT(Async);
-const {ask, liftFn} = AsyncReader;
-
-module.exports = {AsyncReader, ask, liftFn};
-
+export const AsyncReader = ReaderT(Async);
+export const {ask, liftFn} = AsyncReader;
