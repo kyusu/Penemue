@@ -1,7 +1,12 @@
-const test = require('tape');
-const path = require('path');
-const {exec} = require('child_process');
-const {reject, split, compose, isEmpty, startsWith, trim, map, includes} = require('ramda');
+import test from 'tape';
+import path from 'path'
+import {exec} from 'child_process';
+import {reject, split, compose, isEmpty, startsWith, trim, map, includes}  from 'ramda/dist/ramda.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const getMessagesFromError = compose(
     reject(startsWith('at')),

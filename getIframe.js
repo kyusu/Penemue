@@ -1,7 +1,7 @@
-const UrlAssembler = require('url-assembler');
-const {Rejected, Resolved, all} = require('crocks/Async');
-const {split, compose, reject, isEmpty, map, join, chain, construct} = require('ramda');
-const {ask, liftFn, AsyncReader} = require('./AsyncReader.js');
+import UrlAssembler from 'url-assembler/index.js';
+import Async from 'crocks/Async/index.js';
+import {split, compose, reject, isEmpty, map, join, chain, construct} from 'ramda/dist/ramda.js';
+import {ask, liftFn, AsyncReader} from './AsyncReader.js';
 
 const bufferToBase64 = buffer => buffer.toString('base64');
 
@@ -14,28 +14,28 @@ const getRunkitURL = fileName => base64Code => UrlAssembler('https://runkit.com'
     })
     .toString();
 
-const getIframe = fileName => url => `<iframe data-file-name="${fileName}" src="${url}"></iframe>`;
+const getIframeTag = fileName => url => `<iframe data-file-name="${fileName}" src="${url}"></iframe>`;
 
 const convertFileToRunkitIframe = getFileContentAsBuffer => fileName => getFileContentAsBuffer(fileName)
     .chain(checkInput(`"${fileName}" is empty!`))
     .map(bufferToBase64)
     .map(getRunkitURL(fileName))
-    .map(getIframe(fileName));
+    .map(getIframeTag(fileName));
 
-const getRejectedError = compose(Rejected, construct(Error));
+const getRejectedError = compose(Async.Rejected, construct(Error));
 
-const checkInput = errorMessage => input => input && input.length ? Resolved(input) : getRejectedError(errorMessage);
+const checkInput = errorMessage => input => input && input.length ? Async.Resolved(input) : getRejectedError(errorMessage);
 
 const getLines = compose(reject(isEmpty), split('\n'));
 
-const getIframes = getFileContentAsBuffer => compose(all, map(convertFileToRunkitIframe(getFileContentAsBuffer)));
+const getIframes = getFileContentAsBuffer => compose(Async.all, map(convertFileToRunkitIframe(getFileContentAsBuffer)));
 
 const injectFsReadFileAndGetIframes = fileName =>
     AsyncReader(({getFileContentAsBuffer}) => getIframes(getFileContentAsBuffer)(fileName));
 
-const getStdIn = () => AsyncReader(({getStdInAsync}) => getStdInAsync());
+const getStdIn = () => AsyncReader(({getStdinAsync}) => getStdinAsync());
 
-module.exports = env => compose(
+const getIframe = env => compose(
     map(join('\n')),
     chain(injectFsReadFileAndGetIframes),
     map(getLines),
@@ -43,3 +43,5 @@ module.exports = env => compose(
     chain(getStdIn),
     ask
 )().runWith(env);
+
+export default getIframe

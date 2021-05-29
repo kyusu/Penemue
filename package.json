@@ -1,10 +1,11 @@
 {
   "name": "penemue",
   "version": "0.0.1",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
-    "test": "nyc tape end-to-end-test/*.test.js ./*.test.js",
+    "test": "c8 tap end-to-end-test/*.test.js && c8 tap ./getIframes.test.js",
     "lint": "eslint .",
     "precommit": "lint-staged"
   },
@@ -27,12 +28,13 @@
   },
   "homepage": "https://github.com/kyusu/Penemue#readme",
   "dependencies": {
-    "crocks": "^0.12.4",
-    "get-stdin": "^9.0.0",
-    "ramda": "^0.27.0",
-    "url-assembler": "^2.1.1"
+    "crocks": "0.12.4",
+    "get-stdin": "9.0.0",
+    "ramda": "0.27.0",
+    "url-assembler": "2.1.1"
   },
   "devDependencies": {
+    "c8": "7.7.2",
     "coveralls": "3.1.0",
     "eslint": "7.27.0",
     "eslint-config-cleanjs": "4.0.0",
@@ -41,7 +43,7 @@
     "eslint-plugin-import": "2.23.3",
     "husky": "6.0.0",
     "lint-staged": "11.0.0",
-    "nyc": "15.1.0",
+    "tap": "15.0.9",
     "tape": "5.2.2"
   }
 }

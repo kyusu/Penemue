@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const getStdInAsync = require('./getStdinAsync.js');
-const getFileContentAsBuffer = require('./getFileContentAsBuffer.js');
-const getIframes = require('./getIframe');
+import getStdinAsync from "./getStdinAsync.js";
+import getFileContentAsBuffer from "./getFileContentAsBuffer.js";
+import getIframes from './getIframe.js';
 /*eslint better/explicit-return: 0*/
 /*eslint fp/no-nil: 0*/
 const errFn = err => {
@@ -10,6 +10,6 @@ const errFn = err => {
 };
 /*eslint fp/no-unused-expression: 0*/
 getIframes({
-    getStdInAsync,
+    getStdinAsync,
     getFileContentAsBuffer
 }).fork(errFn, console.log);
