@@ -45,7 +45,7 @@
     "eslint-config-cleanjs": "4.0.0",
     "eslint-plugin-better": "0.1.5",
     "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-import": "2.26.0",
     "husky": "8.0.1",
     "lint-staged": "12.4.1",
     "tape": "5.5.3"
