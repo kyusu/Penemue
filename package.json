@@ -5,7 +5,7 @@
   "description": "",
   "exports": "./index.js",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "test:unit": "c8 node ./getIframes.test.js",
