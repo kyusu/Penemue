@@ -2,8 +2,7 @@
 
 [![Node.js CI](https://github.com/kyusu/Penemue/workflows/Node.js%20CI/badge.svg)](https://github.com/kyusu/Penemue/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/kyusu/Penemue/badge.svg?branch=master)](https://coveralls.io/github/kyusu/Penemue?branch=master)
-[![dependencies Status](https://david-dm.org/kyusu/Penemue/status.svg)](https://david-dm.org/kyusu/Penemue)
-[![devDependencies Status](https://david-dm.org/kyusu/Penemue/dev-status.svg)](https://david-dm.org/kyusu/Penemue?type=dev)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/kyusu/Penemue)](https://libraries.io/github/kyusu/Penemue)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c2b6971343ff284370af/maintainability)](https://codeclimate.com/github/kyusu/Penemue/maintainability)
 [![Known Vulnerabilities](https://snyk.io/test/github/kyusu/Penemue/badge.svg)](https://snyk.io/test/github/kyusu/Penemue)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kyusu/Penemue/graphs/commit-activity)
