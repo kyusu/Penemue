@@ -48,6 +48,6 @@
     "eslint-plugin-import": "2.29.1",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
-    "tape": "5.8.0"
+    "tape": "5.8.1"
   }
 }
