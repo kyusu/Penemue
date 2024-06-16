@@ -47,7 +47,7 @@
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-import": "2.29.1",
     "husky": "8.0.3",
-    "lint-staged": "14.0.1",
+    "lint-staged": "15.2.7",
     "tape": "5.8.1"
   }
 }
